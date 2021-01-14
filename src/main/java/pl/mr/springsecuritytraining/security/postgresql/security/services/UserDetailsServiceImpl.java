@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pl.mr.springsecuritytraining.models.User;
 import pl.mr.springsecuritytraining.repository.UserRepository;
-import static pl.mr.springsecuritytraining.security.postgresql.security.services.UserDetailsImpl.*;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
