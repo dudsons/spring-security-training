@@ -13,9 +13,9 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import pl.mr.springsecuritytraining.security.postgresql.security.jwt.AuthEntryPointJwt;
-import pl.mr.springsecuritytraining.security.postgresql.security.jwt.AuthTokenFilter;
-import pl.mr.springsecuritytraining.security.postgresql.security.services.UserDetailsServiceImpl;
+import pl.mr.springsecuritytraining.security.jwt.AuthEntryPointJwt;
+import pl.mr.springsecuritytraining.security.jwt.AuthTokenFilter;
+import pl.mr.springsecuritytraining.security.services.UserDetailsServiceImpl;
 
 @Configuration
 @EnableWebSecurity

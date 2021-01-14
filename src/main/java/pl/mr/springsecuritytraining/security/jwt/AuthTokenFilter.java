@@ -1,4 +1,4 @@
-package pl.mr.springsecuritytraining.security.postgresql.security.jwt;
+package pl.mr.springsecuritytraining.security.jwt;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,7 +9,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
-import pl.mr.springsecuritytraining.security.postgresql.security.services.UserDetailsServiceImpl;
+import pl.mr.springsecuritytraining.security.services.UserDetailsServiceImpl;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;

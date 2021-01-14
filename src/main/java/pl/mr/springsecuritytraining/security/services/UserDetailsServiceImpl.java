@@ -1,4 +1,4 @@
-package pl.mr.springsecuritytraining.security.postgresql.security.services;
+package pl.mr.springsecuritytraining.security.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

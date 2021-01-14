@@ -1,4 +1,4 @@
-package pl.mr.springsecuritytraining.security.postgresql.security.services;
+package pl.mr.springsecuritytraining.security.services;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;

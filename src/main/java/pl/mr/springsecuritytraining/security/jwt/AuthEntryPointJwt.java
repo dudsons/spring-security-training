@@ -1,4 +1,4 @@
-package pl.mr.springsecuritytraining.security.postgresql.security.jwt;
+package pl.mr.springsecuritytraining.security.jwt;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
