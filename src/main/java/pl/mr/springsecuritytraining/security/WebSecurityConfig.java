@@ -13,6 +13,9 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import pl.mr.springsecuritytraining.security.postgresql.security.jwt.AuthEntryPointJwt;
+import pl.mr.springsecuritytraining.security.postgresql.security.jwt.AuthTokenFilter;
+import pl.mr.springsecuritytraining.security.postgresql.security.services.UserDetailsServiceImpl;
 
 @Configuration
 @EnableWebSecurity
@@ -48,7 +51,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable()
-            .exceptionHandling().authenticationEntryPoint(authEntryPointJwt).and()
+            .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
             .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
             .authorizeRequests().antMatchers("/api/auth/**").permitAll()
             .antMatchers("/api/test/**").permitAll()
