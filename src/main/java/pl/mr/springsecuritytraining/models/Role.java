@@ -15,7 +15,7 @@ public class Role {
 
     @Enumerated(EnumType.STRING)
     @Column(length = 20)
-    private ERole role;
+    private ERole name;
 
     @ManyToMany(mappedBy = "roles")
     private Set<User>users = new HashSet<>();
@@ -23,8 +23,8 @@ public class Role {
     public Role() {
     }
 
-    public Role(ERole role) {
-        this.role = role;
+    public Role(ERole name) {
+        this.name = name;
     }
 
     public long getId() {
@@ -35,11 +35,11 @@ public class Role {
         this.id = id;
     }
 
-    public ERole getRole() {
-        return role;
+    public ERole getName() {
+        return name;
     }
 
-    public void setRole(ERole role) {
-        this.role = role;
+    public void setName(ERole name) {
+        this.name = name;
     }
 }
