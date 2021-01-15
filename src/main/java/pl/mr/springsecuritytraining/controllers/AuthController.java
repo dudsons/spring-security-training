@@ -91,19 +91,19 @@ public class AuthController {
                 passwordEncoder.encode(signupRequest.getPassword()));
 
         if(strRoles == null){
-            Role role = roleRepository.findByRole(ERole.ROLE_USER).orElseThrow(()-> new RuntimeException("Role not found"));
+            Role role = roleRepository.findByName(ERole.ROLE_USER).orElseThrow(()-> new RuntimeException("Role not found"));
             roles.add(role);
         } else {
             strRoles.forEach(role -> {
                 switch (role){
                     case "admin":
-                       roles.add(roleRepository.findByRole(ERole.ROLE_ADMIN).orElseThrow(()-> new RuntimeException("Role is not found")));
+                       roles.add(roleRepository.findByName(ERole.ROLE_ADMIN).orElseThrow(()-> new RuntimeException("Role is not found")));
                        break;
                     case "mod":
-                        roles.add(roleRepository.findByRole(ERole.ROLE_MODERATOR).orElseThrow(()-> new RuntimeException("Role is not found")));
+                        roles.add(roleRepository.findByName(ERole.ROLE_MODERATOR).orElseThrow(()-> new RuntimeException("Role is not found")));
                         break;
                     default:
-                        roles.add(roleRepository.findByRole(ERole.ROLE_USER).orElseThrow(()-> new RuntimeException("Role is not found")));
+                        roles.add(roleRepository.findByName(ERole.ROLE_USER).orElseThrow(()-> new RuntimeException("Role is not found")));
                 }
             });
         }
