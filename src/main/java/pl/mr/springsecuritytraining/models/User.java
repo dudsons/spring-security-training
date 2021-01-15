@@ -42,11 +42,10 @@ public class User {
     public User() {
     }
 
-    public User(@NotBlank String name, @NotBlank @Email String email, @NotBlank String password, Set<Role> roles) {
+    public User(@NotBlank String name, @NotBlank @Email String email, @NotBlank String password) {
         this.name = name;
         this.email = email;
         this.password = password;
-        this.roles = roles;
     }
 
     public long getId() {
