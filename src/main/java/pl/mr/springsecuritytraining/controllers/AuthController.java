@@ -71,7 +71,7 @@ public class AuthController {
         if(userRepository.existsUserByName(signupRequest.getUsername())){
            return  ResponseEntity
                    .badRequest()
-                   .body(new MessageResponse("Usie is existing, try different name for user"));
+                   .body(new MessageResponse("Use is existing, try different name for user"));
         }
 
         if(userRepository.existsUserByEmail(signupRequest.getEmail())){
